@@ -1,0 +1,68 @@
+# Miscellaneous
+*.class
+*.lock
+*.log
+*.pyc
+*.swp
+.DS_Store
+.env
+.firebase/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+
+# Generated files from FlutterFire CLI
+/lib/firebase_options.dart
+
+# Firebase config files (sensitive credentials)
+**/android/app/google-services.json
+**/ios/Runner/GoogleService-Info.plist
+**/ios/Flutter/GoogleService-Info.plist
+firebase.json
+firestore.rules
+storage.rules
+
+# Freezed & build_runner generated files
+*.freezed.dart
+*.g.dart
+*.gr.dart
+
+# VS Code / Android Studio
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.iml
+*.ipr
+*.iws
+.DartVimrc
+.idx
+
+# Android
+android/.gradle/
+android/captures/
+android/gradlew
+android/gradlew.bat
+android/local.properties
+**/android/key.properties
+
+# iOS
+ios/.generated/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/app.config
+ios/Flutter/app.framework
+ios/Flutter/app.pods
+ios/.symlinks/
+ios/Runner/GoogleService-Info.plist
+ios/Pods/
+ios/Podfile.lock
+ios/Runner/GeneratedPluginRegistrant.*
