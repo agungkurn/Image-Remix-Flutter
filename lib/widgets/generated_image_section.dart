@@ -74,7 +74,7 @@ class LoadingState extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Shimmer(
-    gradient: LinearGradient(colors: [Colors.grey, Colors.white24]),
+    gradient: LinearGradient(colors: [Colors.white10, Colors.white]),
     child: Container(
       width: double.infinity,
       alignment: Alignment.center,
@@ -132,7 +132,22 @@ class ImageSection extends StatelessWidget {
                     aspectRatio: 1,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(20),
-                      child: Image.network(generated[i], fit: BoxFit.cover),
+                      child: Image.network(
+                        generated[i],
+                        fit: BoxFit.cover,
+                        loadingBuilder: (ctx, child, progress) {
+                          if (progress == null) return child;
+
+                          return Shimmer(
+                            gradient: LinearGradient(
+                                colors: [Colors.black12, Colors.grey],
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight
+                            ),
+                            child: child,
+                          );
+                        },
+                      ),
                     ),
                   ),
                 ),
